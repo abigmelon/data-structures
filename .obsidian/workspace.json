@@ -1,0 +1,193 @@
+{
+  "main": {
+    "id": "51b22a2fd3307e93",
+    "type": "split",
+    "children": [
+      {
+        "id": "b2326d980038f68f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f6d63bb5ec644f3a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "树型结构/高级树结构.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "高级树结构"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "7967e605be53b2ab",
+    "type": "split",
+    "children": [
+      {
+        "id": "0310ba03fcd9e408",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "16f8139f5f8eeac4",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "715eb7e9c47f2abe",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "74e90d4488ace3da",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "28ebf8f1ea202d59",
+    "type": "split",
+    "children": [
+      {
+        "id": "b8f56a5f4cdb6fc8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "61a23f5205d03132",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "树型结构/高级树结构.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "高级树结构 的反向链接列表"
+            }
+          },
+          {
+            "id": "82a73b0d9332ccec",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "树型结构/高级树结构.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "高级树结构 的出链列表"
+            }
+          },
+          {
+            "id": "8a2e96f85aa82d01",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "81e5d2f3056915f3",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "添加笔记属性"
+            }
+          },
+          {
+            "id": "fb14f17417b7a189",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "树型结构/高级树结构.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "高级树结构 的大纲"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:新建数据库": false
+    }
+  },
+  "active": "16f8139f5f8eeac4",
+  "lastOpenFiles": [
+    "2026-04-07.md",
+    "未命名.canvas",
+    "未命名 1.canvas",
+    "树型结构/高级树结构.md"
+  ]
+}
