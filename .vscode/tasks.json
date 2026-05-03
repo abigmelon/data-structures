@@ -58,14 +58,41 @@
         },
         {
             "label": "编译并运行",
-            "dependsOn": ["终止旧进程", "编译", "运行程序"],
+            "dependsOn": [
+                "终止旧进程",
+                "编译",
+                "运行程序"
+            ],
             "dependsOrder": "sequence",
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "problemMatcher": [],
+            "detail": "一键终止旧进程→编译→运行当前程序"
+        },
+        {
+            "type": "cppbuild",
+            "label": "C/C++: gcc.exe 生成活动文件",
+            "command": "D:\\mingw64\\bin\\gcc.exe",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
             "group": {
                 "kind": "build",
                 "isDefault": true
             },
-            "problemMatcher": [],
-            "detail": "一键终止旧进程→编译→运行当前程序"
+            "detail": "调试器生成的任务。"
         }
     ],
     "version": "2.0.0"
