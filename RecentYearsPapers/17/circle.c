@@ -6,78 +6,60 @@ struct listNode {
     struct listNode *next;
 };
 
-typedef struct listNode * Node;
+typedef struct listNode *Node;
 
-void initList(Node node) {
-    node->next = NULL;
-}
+int main(void) {
+    Node head = malloc(sizeof(struct listNode));
+    if (head == NULL) return 1;
+    head->next = NULL;
 
-_Bool insertList(Node head, int element) {
-    Node node = malloc(sizeof(struct listNode));
-    if (node == NULL) return 0;
-    while (head->next)
-        head = head->next;
-    node->element = element;
-    node->next = head->next;
-    head->next = node;
-    return 1;
-}
-
-Node findTailList(Node head) {
-    while (head->next)
-        head = head->next;
-    return head;
-}
-
-int main() {
-    struct listNode head;
-    initList(&head);
     int n;
     scanf("%d", &n);
+
+    Node tail = head;
     for (int i = 0; i < n; i++) {
-        int num;
-        scanf("%d", &num);
-        insertList(&head, num);
+        int val;
+        scanf("%d", &val);
+        Node node = malloc(sizeof(struct listNode));
+        if (node == NULL) return 1;
+        node->element = val;
+        node->next = NULL;
+        tail->next = node;
+        tail = node;
     }
 
-    // 构成循环链表（哑结点不参与环）
-    Node first = head.next;
-    Node tail = findTailList(&head);
-    tail->next = first;
-
-    Node current = first;
-
+    if (n == 0) {
+        free(head);
+        return 0;
+    }
+    tail->next = head->next;
+    Node current = head->next;
     for (int round = 0; round < n; round++) {
-        // 只剩一个节点，直接输出并删除
         if (current->next == current) {
             printf("%d \n", current->element);
             free(current);
             break;
         }
+        Node prev_current = current;
+        while (prev_current->next != current)
+            prev_current = prev_current->next;
 
-        // 找到 current 的前驱（环中最后一个节点）
-        Node tail_prev = current;
-        while (tail_prev->next != current)
-            tail_prev = tail_prev->next;
-
-        // 第一遍遍历：找最小值和它的前驱
-        Node min_node = current;
-        Node min_prev = tail_prev;
         int min_val = current->element;
+        Node min_node = current;
+        Node min_prev = prev_current;
 
         Node p = current->next;
-        Node prev = current;
+        Node p_prev = current;
         do {
             if (p->element < min_val) {
                 min_val = p->element;
                 min_node = p;
-                min_prev = prev;
+                min_prev = p_prev;
             }
-            prev = p;
+            p_prev = p;
             p = p->next;
         } while (p != current);
 
-        // 第二遍遍历：从 current 打印到 min_node（包含）
         p = current;
         do {
             printf("%d ", p->element);
@@ -85,12 +67,11 @@ int main() {
             p = p->next;
         } while (1);
         printf("\n");
-
-        // 删除 min_node，当前位置移到 min_node 的下一个
-        current = min_node->next;
         min_prev->next = min_node->next;
+        current = min_node->next;
         free(min_node);
     }
 
+    free(head);
     return 0;
 }
