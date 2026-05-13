@@ -20,9 +20,9 @@ void initList(Node node) {
     node->next = NULL;
 }
 
-_Bool insertList(Node head, E element, int index) {
-    if (index < 1) return 0;
-    while (--index) {
+_Bool insertList(Node head, E element, int zhishu) {
+    if (zhishu < 1) return 0;
+    while (--zhishu) {
         head = head->next;//头节点往前移
         if (head == NULL) return 0;
     }//限定左边界和右边界
